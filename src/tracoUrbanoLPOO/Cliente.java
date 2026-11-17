@@ -1,12 +1,13 @@
 package tracoUrbanoLPOO;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Cliente extends Pessoa {
     private LocalDateTime dataNascimento;
 
-    public Cliente(int id, String nome, String cpf, String email, String telefone, LocalDateTime dataNascimento) {
-        super(id, nome, cpf, email, telefone);
+    public Cliente(String nome, String cpf, String email, String telefone, LocalDateTime dataNascimento) {
+        super(UUID.randomUUID().toString(), nome, cpf, email, telefone);
         this.dataNascimento = dataNascimento;
     }
 
