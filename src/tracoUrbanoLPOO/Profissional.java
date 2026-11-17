@@ -1,12 +1,14 @@
 package tracoUrbanoLPOO;
 
+import java.util.UUID;
+
 public class Profissional extends Pessoa {
     private String especialidade;
     private double percentualComissao;
     private Agenda agenda;
 
-    public Profissional(int id, String nome, String cpf, String telefone, String email, String especialidade, double percentualComissao) {
-        super(id, nome, cpf, telefone, email);
+    public Profissional(String nome, String cpf, String telefone, String email, String especialidade, double percentualComissao) {
+        super(UUID.randomUUID().toString(), nome, cpf, telefone, email);
         this.especialidade = especialidade;
         this.percentualComissao = percentualComissao;
         this.agenda = new Agenda();

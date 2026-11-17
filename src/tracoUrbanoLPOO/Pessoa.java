@@ -1,13 +1,13 @@
 package tracoUrbanoLPOO;
 
 public abstract class Pessoa {
-    private int id;
+    private String id;
     private String nome;
     private String cpf;
     private String telefone;
     private String email;
 
-    public Pessoa(int id, String nome, String cpf, String telefone, String email) {
+    public Pessoa(String id, String nome, String cpf, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -15,7 +15,7 @@ public abstract class Pessoa {
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
